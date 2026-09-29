@@ -1,0 +1,14 @@
+build:
+  command: "npm install"
+  system: auto
+
+start_command: "node server.js"
+
+scaling:
+  min_replicas: 1
+  max_replicas: 1
+
+health_check:
+  type: http
+  http_path: "/health"
+  interval_in_seconds: 30
